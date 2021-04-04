@@ -1,0 +1,4 @@
+# Je ne veux pas que mon site soit référencé dans les moteurs de recherche donc:
+
+User-agent: *
+Disallow: /

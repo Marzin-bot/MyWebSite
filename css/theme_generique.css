@@ -1,0 +1,261 @@
+@charset "utf-8";
+::selection{
+	background: white;
+	color: black;
+}
+html{
+	scrollbar-color: rgba(0, 0, 0, 0.7) #151515;
+}
+body{
+	padding: 0;
+	margin: 0;
+	background: #151515;
+	font-family: Arial, sans-serif, system-ui;
+	color: #bbb;
+	font-size: 20px;
+	overflow-x: hidden;
+}
+body::-webkit-scrollbar{
+	width: 15px;
+	background: #151515;
+}
+body::-webkit-scrollbar-thumb{
+	background: rgba(0, 0, 0, 0.5);
+}
+h1, h2, h3, a, button, thead{
+	color: white;
+	margin: 0;
+	font-weight: 100;
+	text-decoration: none;
+	text-align: center;
+}
+header{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 100px;
+	z-index: 2;
+	background: rgba(10, 10, 10, 0.95);
+	border-radius: 0 0 50% 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 25px;
+	transition: top 500ms, border-radius 500ms;
+}
+nav{
+	width: 40%;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+}
+main{
+	padding-top: 180px;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+article{
+	width: 100%;
+}
+h1{
+	font-size: 45px;
+}
+small{
+	display: block;
+	text-align: center;
+	font-size: 15px;
+	font-style: oblique;
+}
+hr{
+	width: 50%;
+	border: none;
+	height: 1px;
+	background: linear-gradient(to left, transparent 20%, white, transparent 80%);
+	margin: 10px auto;
+}
+section{
+	align-items: center;
+	position: relative;
+	width: 100%;
+	box-sizing: border-box;
+	display: flex;
+	padding: 60px 0 50px 0;
+	justify-content: center;
+	flex-direction: column;
+}
+a:hover{
+	text-decoration: underline;
+}
+#section_presentation{
+	background: #151515;
+	z-index: 1;
+}
+#section_presentation::after{
+	content:"";
+	position: absolute;
+	display: block;
+	bottom: -80px;
+	left: 0;
+	background: inherit;
+	width: 100%;
+	height: 80px;
+	clip-path: polygon(50% 100%, 0 0, 100% 0);
+}
+p{
+	line-height: 30px;
+	width: 70%;
+	text-align: center;
+	margin: 20px 0;
+}
+.photo_profil{
+	width: 200px;
+	border-radius: 50%;
+	border: solid #151515 5px;
+	box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 50px -1px black;
+}
+#photo_profil{
+	display: none;
+	margin-top: 30px;
+	border-color: #1f1f1f;
+}
+#section_infos{
+	background: #1f1f1f;
+	padding: 180px 0;
+}
+table{
+	margin-top: 30px;
+	text-align: center;
+	width: 70%;
+}
+tbody td{
+	padding: 15px;
+}
+thead th{
+	border-radius: 3px;
+	padding: 15px;
+	font-size: 25px;
+	font-weight: 100;
+	background: rgba(255, 255, 255, 0.12);
+}
+ul{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style-type: none;
+	display: flex;
+	line-height: 40px;
+	align-items: center;
+	justify-content: center;
+}
+li img{
+	width: 30px;
+	max-height: 30px;
+	margin-right: 10px;
+	filter: drop-shadow(0 0 3px #88bdff);
+}
+#bouton_navigation_article{
+	position: fixed;
+	clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+	z-index: 1;
+	background: rgba(10, 10, 10, 0.95);
+	bottom: 0;
+	right: 0;
+	padding: 80px 30px 20px 250px;
+	font-size: 20px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+figure{
+	margin: 30px;
+}
+figure img{
+	border-radius: 3px;
+	width: 100%;
+	box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 50px -1px black;
+}
+video{
+	width: 50%;
+}
+footer{
+	position: relative;
+	background: #151515;
+	padding: 0 20% 30px 20%;
+	display: flex;
+	flex-direction: column;
+}
+footer::before{
+	content:"";
+	position: absolute;
+	display: block;
+	top: -80px;
+	left: 0;
+	background: inherit;
+	width: 100%;
+	height: 80px;
+	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+footer img{
+	margin-bottom: 30px;
+	filter: drop-shadow(0 0 3px #88bdff);
+	height: 100px;
+}
+noscript{
+	z-index: 100;
+	margin: 0;
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	top: 0;
+	background: #191919;
+	justify-content: center;
+	padding: 30px;
+	align-items: center;
+	box-sizing: border-box;
+	height: 100%;
+	width: 100%;
+}
+
+@media screen and (max-width: 1200px){
+	nav{
+		width: 70%;
+		top: -10px;
+	}
+	section{
+		padding: 60px 30px 50px 30px;
+	}
+	#section_infos{
+		padding: 180px 30px;
+	}
+	p, table, input{
+		width: 100%;
+	}
+	figure{
+		margin: 0;
+		margin-top: 30px;
+		width: 80%;
+	}
+	video{
+		width: 100%;
+	}
+}
+@media screen and (max-width: 750px){
+	nav{
+		width: 90%;
+		top: -20px;
+	}
+	#photo_profil{
+		display: block;
+	}
+	#conteneur_photo_profil{
+		display: none;
+	}
+	figure{
+		margin: 0;
+		margin-top: 30px;
+		width: 100%;
+	}
+}
