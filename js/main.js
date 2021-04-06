@@ -27,7 +27,7 @@ window.onscroll = function (e){
 	if (y > document.getElementById("section_presentation").clientHeight + 100){
 		document.getElementById("bouton_navigation_article").textContent = "Aller en haut";
 	}else{
-		document.getElementById("bouton_navigation_article").textContent = "Voir le contenue du CV";
+		document.getElementById("bouton_navigation_article").textContent = "Voir le contenu du CV";
 	}
 }
 
